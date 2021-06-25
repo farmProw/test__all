@@ -1,0 +1,166 @@
+@import 'fonts';
+@import 'mixin';
+@import 'vars';
+@import '../../node_modules/swiper/swiper-bundle.css';
+// =============================ШРИФТ ПАПА=====================================================
+$font:"ProximaNova";
+// ============================Розміри екрана ====================================================
+// $minwidth:320px;
+// $mw:1180;
+// $md1:$mw+10;
+// $md2:992.98;
+// $md3:767.98;
+// $md4:479.98;
+$minwidth:320px;
+$mw:1180;
+$md1:$mw+10;
+$md2:1024;
+$md3:767.98;
+$md4:479.98;
+
+
+*,
+*::after,
+*::before {
+   box-sizing: inherit;
+}
+
+ul {
+   padding: 0;
+   margin: 0;
+
+}
+
+li {
+   list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   margin: 0;
+   padding: 0;
+}
+
+button {
+   padding: 0;
+}
+
+a {
+   display: inline-block;
+   text-decoration: none;
+}
+
+html {
+   font-family: serif;
+   box-sizing: border-box;
+   // scroll-behavior: smooth;
+}
+
+body {
+   height: 100%;
+   font-size: 14px;
+   font-family: $font;
+   font-weight: 700;
+   font-style: normal;
+   line-height: 1;
+   letter-spacing: normal;
+
+   // overflow: hidden;
+
+   &._lock {
+      overflow: hidden;
+
+      @media(max-width:$md3+px) {
+         // width: 100%;
+         // position: fixed;
+         // overflow:hidden;
+      }
+   }
+}
+
+html,
+body {
+
+   ::-webkit-scrollbar {
+      background-color: #807e7e;
+      width: 6px;
+   }
+
+   ::-webkit-scrollbar-thumb {
+      background-color: #9000ed;
+   }
+
+}
+
+.wrapper {
+   min-height: 100%;
+   min-width: 100%;
+   // overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.container {
+   max-width: $mw+px;
+   margin: 0 auto;
+   
+   // @media(max-width:1340px){
+   //    max-width: 1024px;
+   // }
+   @media(max-width:$md1+px) {
+      padding-right: 10px;
+      padding-left: 10px;
+      max-width: 1000px;
+   }
+
+   @media(max-width:$md2+px){
+      max-width: none;
+      padding-right:10px;
+      padding-left:10px;
+   }
+   @media(max-width:$md3+px) {
+      max-width: none;
+      padding-right:10px;
+      padding-left:10px;
+   }
+}
+
+.burger--clean {
+   border: transparent;
+   outline: transparent;
+   background-color: transparent;
+}
+
+.input--reset {
+   appearance: none;
+   visibility: hidden;
+   height: 0;
+   width: 0;
+   position: absolute;
+}
+.accordion__btn--transparent{}
+.panel__icon--checked{}
+.panel-column--hidden{
+   display: none;
+}
+.list-item__price--choosed{
+   color: #9000ed;
+}
+
+
+@import'burger';
+@import 'header';
+@import 'page';
+@import'footer';
+
+
+
+
+// ::-webkit-scrollbar {
+//       width: 0;
+//     }

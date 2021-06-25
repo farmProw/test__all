@@ -1,0 +1,13 @@
+//Підтягує шрифти з гугл
+// &display=swap для кращої прогрузки і якщо шрифт відсутній то йде заміна
+// &subset=cyrillic-ext якщо наявна кирилиця
+
+
+@font-face {
+   font-family: "ProximaNova";
+   src: url("../fonts/ProximaNova-Bold.woff2") format("woff2"),
+      url("../fonts/ProximaNova-Bold.woff") format("woff"),
+      url("../fonts/ProximaNova-Bold.ttf") format("truetype");
+   font-weight: 700;
+   font-style: normal;
+}
